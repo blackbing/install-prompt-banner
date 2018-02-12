@@ -1,10 +1,10 @@
-class installPrompt {
+class installPromptBanner {
   /**
-   * Creates an instance of installPrompt.
-   * @param {object} { promptKey = '~installPrompt~', minimumPrompt = 2 }={}
-   * @memberof installPrompt
+   * Creates an instance of installPromptBanner.
+   * @param {object} { promptKey = '~installPromptBanner~', minimumPrompt = 2 }={}
+   * @memberof installPromptBanner
    */
-  constructor({ promptKey = '~installPrompt~', minimumPrompt = 2 } = {}) {
+  constructor({ promptKey = '~installPromptBanner~', minimumPrompt = 2 } = {}) {
     this.inited = false;
     this.deferredPrompt = null;
     window.addEventListener('beforeinstallprompt', this._handleBeforeInstallPrompt, false);
@@ -61,7 +61,7 @@ class installPrompt {
 
   /**
    * addCount from localStorage
-   * @memberof installPrompt
+   * @memberof installPromptBanner
    */
   addCount = () => {
     let currentPVCount = this._getCountFromStorage();
@@ -77,4 +77,4 @@ class installPrompt {
   };
 }
 
-export default installPrompt;
+export default installPromptBanner;

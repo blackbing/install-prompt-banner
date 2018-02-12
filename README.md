@@ -1,4 +1,4 @@
-# install-prompt [![npm version](https://badge.fury.io/js/install-prompt.svg)](https://badge.fury.io/js/install-prompt) [![Build Status](https://api.travis-ci.org/blackbing/install-prompt.svg?branch=master)](https://travis-ci.org/blackbing/install-prompt) [![codecov](https://codecov.io/gh/blackbing/install-prompt/branch/master/graph/badge.svg)](https://codecov.io/gh/blackbing/install-prompt)
+# install-prompt-banner [![npm version](https://badge.fury.io/js/install-prompt-banner.svg)](https://badge.fury.io/js/install-prompt-banner) [![Build Status](https://api.travis-ci.org/blackbing/install-prompt-banner.svg?branch=master)](https://travis-ci.org/blackbing/install-prompt-banner) [![codecov](https://codecov.io/gh/blackbing/install-prompt-banner/branch/master/graph/badge.svg)](https://codecov.io/gh/blackbing/install-prompt-banner)
 
 This is a small library for handling install Banner for Progressive Web Apps(PWA).
 
@@ -19,36 +19,36 @@ No dependency
 # Install
 
 ``` sh
-yarn add install-prompt
+yarn add install-prompt-banner
 ```
 
 # Usage
 
 ``` js
-import InstallPrompt from 'install-prompt';
-// initial installPrompt
-const installPrompt = new InstallPrompt();
+import InstallPrompt from 'install-prompt-banner';
+// initial installPromptBanner
+const installPromptBanner = new InstallPrompt();
 
 // add 1 count when user do some interactive
-installPrompt.addCount();
+installPromptBanner.addCount();
 
 // check if prompt should popup
-installPrompt.checkPrompt();
+installPromptBanner.checkPrompt();
 ```
 
 # Real example (React)
 
 ``` js
-  import InstallPrompt from 'install-prompt';
+  import InstallPrompt from 'install-prompt-banner';
   ...
   componentDidMount() {
-    this.installPrompt = new InstallPrompt();
-    this.installPrompt.addCount();
+    this.installPromptBanner = new InstallPrompt();
+    this.installPromptBanner.addCount();
   }
 
   componentWillReceiveProps(nextProps) {
     if (nextProps.cid !== this.props.cid) {
-      this.installPrompt.addCount().checkPrompt();
+      this.installPromptBanner.addCount().checkPrompt();
     }
   }
 
@@ -56,7 +56,7 @@ installPrompt.checkPrompt();
 
 # Options
 
-* promptKey: (string) default is 'installPrompt'
+* promptKey: (string) default is 'installPromptBanner'
 
 * minimumPrompt: (number) default is 2
 
@@ -65,7 +65,7 @@ installPrompt.checkPrompt();
 e.g,
 
 ``` js
-const installPrompt = new InstallPrompt({
+const installPromptBanner = new InstallPrompt({
   promptKey: 'custom-localstorage-key',
   minumumPrompt: 5
 });
