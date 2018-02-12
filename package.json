@@ -1,7 +1,7 @@
 {
   "name": "install-prompt",
   "version": "0.0.1",
-  "description": "a small library for handling install Banner for Progreww Web Application(PWA)",
+  "description": "This is a small library for handling install Banner for Progressive Web Apps(PWA)",
   "main": "lib/installPrompt.js",
   "scripts": {
     "build": "webpack --env dev && webpack --env build",

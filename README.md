@@ -1,6 +1,16 @@
 # install-prompt [![npm version](https://badge.fury.io/js/install-prompt.svg)](https://badge.fury.io/js/install-prompt) [![Build Status](https://api.travis-ci.org/blackbing/install-prompt.svg?branch=master)](https://travis-ci.org/blackbing/install-prompt) [![codecov](https://codecov.io/gh/blackbing/install-prompt/branch/master/graph/badge.svg)](https://codecov.io/gh/blackbing/install-prompt)
 
-This is a small library for handling install Banner for Progreww Web Application(PWA).
+This is a small library for handling install Banner for Progressive Web Apps(PWA).
+
+# Why
+
+When developing Progressive Web Apps(PWA), the timing of Install App Banner is confused. The default prompt behavior is not cool for users. I create a simple count and  limit to decide when should prompt the install banner for user. This library is very tiny implemention from *Deferring or cancelling the prompt* <https://developers.google.com/web/fundamentals/app-install-banners/>. You can add it with whatever user's interaction in your web site.
+
+For example,
+
+* click "Call to Action" 3 times
+* check latest more than 3 times
+* viewed more than 2 pages.
 
 # Dependency
 
