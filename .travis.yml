@@ -21,7 +21,8 @@ install:
   - yarn global add codecov
 
 script:
-  - yarn test:ci
+  - yarn
+  - yarn run test:ci
   - codecov
 
 branches:

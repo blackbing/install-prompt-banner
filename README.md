@@ -1,4 +1,4 @@
-# install-prompt
+# install-prompt [![npm version](https://badge.fury.io/js/install-prompt.svg)](https://badge.fury.io/js/install-prompt) [![Build Status](https://api.travis-ci.org/blackbing/install-prompt.svg?branch=master)](https://travis-ci.org/blackbing/install-prompt) [![codecov](https://codecov.io/gh/blackbing/install-prompt/branch/master/graph/badge.svg)](https://codecov.io/gh/blackbing/install-prompt)
 
 This is a small library for handling install Banner for Progreww Web Application(PWA).
 
