@@ -1,13 +1,14 @@
 {
-  "name": "installPrompt",
+  "name": "install-prompt",
   "version": "0.0.1",
-  "description": "a small library for handle install Banner for Progreww Web Application(PWA)",
+  "description": "a small library for handling install Banner for Progreww Web Application(PWA)",
   "main": "lib/installPrompt.js",
   "scripts": {
-    "build": "webpack --env dev && webpack --env build && npm run test",
+    "build": "webpack --env dev && webpack --env build",
     "dev": "webpack --progress --colors --watch --env dev",
-    "test": "TZ=Asia/Taipei jest",
-    "test:watch": "test -- --watch"
+    "test": "jest",
+    "test:ci": "jest --coverage",
+    "test:watch": "jest --watch"
   },
   "repository": {
     "type": "git",

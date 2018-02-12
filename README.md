@@ -1,4 +1,4 @@
-# InstallPrompt
+# install-prompt
 
 This is a small library for handling install Banner for Progreww Web Application(PWA).
 
@@ -8,13 +8,14 @@ No dependency
 
 # Install
 
-```
-yarn add installPrompt
+``` sh
+yarn add install-prompt
 ```
 
 # Usage
-```
-import InstallPrompt from 'installPrompt';
+
+``` js
+import InstallPrompt from 'install-prompt';
 // initial installPrompt
 const installPrompt = new InstallPrompt();
 
@@ -27,8 +28,8 @@ installPrompt.checkPrompt();
 
 # Real example (React)
 
-```
-  import InstallPrompt from 'installPrompt';
+``` js
+  import InstallPrompt from 'install-prompt';
   ...
   componentDidMount() {
     this.installPrompt = new InstallPrompt();
@@ -45,14 +46,15 @@ installPrompt.checkPrompt();
 
 # Options
 
-* promptKey: (string) default is '~installPrompt~'
+* promptKey: (string) default is 'installPrompt'
 
 * minimumPrompt: (number) default is 2
 
 
 
 e.g,
-```
+
+``` js
 const installPrompt = new InstallPrompt({
   promptKey: 'custom-localstorage-key',
   minumumPrompt: 5
@@ -60,12 +62,14 @@ const installPrompt = new InstallPrompt({
 ```
 
 # Development
-```
+
+``` sh
 yarn dev
 ```
 
 # Test
-```
+
+``` sh
 yarn test
 ```
 
