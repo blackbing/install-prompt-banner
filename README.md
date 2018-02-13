@@ -4,7 +4,7 @@ This is a small library for handling install Banner for Progressive Web Apps(PWA
 
 # Why
 
-When developing Progressive Web Apps(PWA), the timing of Install App Banner is confused. The default prompt behavior is not cool for users. I create a simple count and  limit to decide when should prompt the install banner for user. This library is very tiny implemention from *Deferring or cancelling the prompt* <https://developers.google.com/web/fundamentals/app-install-banners/>. You can add it with whatever user's interaction in your web site.
+When developing Progressive Web Apps(PWA), the timing of Install App Banner is confused. The default prompt behavior is not cool for users. I create a simple count way to decide the timing of the install banner. This library is very tiny which is implemention from *Deferring or cancelling the prompt* <https://developers.google.com/web/fundamentals/app-install-banners/>. You can add it with whatever user's interaction in your web site.
 
 For example,
 
