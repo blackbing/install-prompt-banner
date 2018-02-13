@@ -1,6 +1,6 @@
 {
   "name": "install-prompt-banner",
-  "version": "0.0.1",
+  "version": "0.0.3",
   "description": "This is a small library for handling install Banner for Progressive Web Apps(PWA)",
   "main": "lib/install-prompt-banner.js",
   "scripts": {
@@ -12,23 +12,24 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/krasimir/webpack-library-starter.git"
+    "url": "git+https://github.com/blackbing/install-prompt-banner.git"
   },
   "keywords": [
-    "webpack",
-    "es6",
-    "starter",
-    "library",
-    "universal",
-    "umd",
-    "commonjs"
+    "PWA",
+    "progressive",
+    "install",
+    "prompt",
+    "banner",
+    "add",
+    "to",
+    "homescreen"
   ],
-  "author": "Krasimir Tsonev",
+  "author": "Bingo Yang",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/krasimir/webpack-library-starter/issues"
+    "url": "https://github.com/blackbing/install-prompt-banner/issues"
   },
-  "homepage": "https://github.com/krasimir/webpack-library-starter",
+  "homepage": "https://github.com/blackbing/install-prompt-banner",
   "devDependencies": {
     "babel-cli": "^6.26.0",
     "babel-core": "^6.26.0",
@@ -42,6 +43,7 @@
     "eslint": "^4.13.1",
     "eslint-loader": "^1.9.0",
     "jest": "^22.2.2",
+    "jest-localstorage-mock": "^2.2.0",
     "mocha": "^4.0.1",
     "webpack": "^3.10.0",
     "yargs": "^10.0.3"
@@ -56,6 +58,7 @@
       "!**/__tests__/**"
     ],
     "setupFiles": [
+      "jest-localstorage-mock",
       "<rootDir>/config/jest/setup.js"
     ],
     "testPathIgnorePatterns": [
