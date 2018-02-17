@@ -1,4 +1,4 @@
-# install-prompt-banner [![npm version](https://badge.fury.io/js/install-prompt-banner.svg)](https://badge.fury.io/js/install-prompt-banner) [![Build Status](https://api.travis-ci.org/blackbing/install-prompt-banner.svg?branch=master)](https://travis-ci.org/blackbing/install-prompt-banner) [![codecov](https://codecov.io/gh/blackbing/install-prompt-banner/branch/master/graph/badge.svg)](https://codecov.io/gh/blackbing/install-prompt-banner)
+# install-prompt-banner [![npm version](https://badge.fury.io/js/install-prompt-banner.svg)](https://badge.fury.io/js/install-prompt-banner) [![npm](https://img.shields.io/npm/dt/install-prompt-banner.svg?style=flat-square)](https://www.npmjs.com/package/install-prompt-banner) [![Build Status](https://api.travis-ci.org/blackbing/install-prompt-banner.svg?branch=master)](https://travis-ci.org/blackbing/install-prompt-banner) [![codecov](https://codecov.io/gh/blackbing/install-prompt-banner/branch/master/graph/badge.svg)](https://codecov.io/gh/blackbing/install-prompt-banner)
 
 This is a small library for handling install Banner for Progressive Web Apps(PWA).
 
