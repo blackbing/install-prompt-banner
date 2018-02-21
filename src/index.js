@@ -8,12 +8,22 @@ class installPromptBanner {
     this.inited = false;
     this.deferredPrompt = null;
     window.addEventListener('beforeinstallprompt', this._handleBeforeInstallPrompt, false);
+    window.addEventListener('beforeunload', this._handleBeforeUnload, false);
     this.options = {
       promptKey,
       minimumPrompt,
     };
+    this.count = this._getCountFromStorage();
 
     return this;
+  }
+
+  _handleBeforeInstallPrompt = e => {
+    try {
+      localStorage.setItem(this.options.promptKey, this.count);
+    } catch (e) {
+      // do nothing
+    }
   }
 
   _handleBeforeInstallPrompt = e => {
@@ -41,10 +51,18 @@ class installPromptBanner {
     return +currentPVCount;
   };
 
-  checkPrompt = (force = false) => {
-    const count = this._getCountFromStorage();
+  _setCountToStorage = () => {
+    try {
+      localStorage.setItem(this.options.promptKey, this.count);
+    } catch (e) {
+      // do nothing
+    }
 
-    if (force || count > this.options.minimumPrompt) {
+    return this.count;
+  };
+
+  checkPrompt = (force = false) => {
+    if (force || this.count > this.options.minimumPrompt) {
       this.pop();
     }
 
@@ -64,14 +82,7 @@ class installPromptBanner {
    * @memberof installPromptBanner
    */
   addCount = () => {
-    let currentPVCount = this._getCountFromStorage();
-
-    currentPVCount += 1;
-    try {
-      localStorage.setItem(this.options.promptKey, currentPVCount);
-    } catch (e) {
-      // do nothing
-    }
+    this.count++;
 
     return this;
   };

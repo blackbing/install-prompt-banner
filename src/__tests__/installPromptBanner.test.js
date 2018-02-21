@@ -35,14 +35,36 @@ describe('installPromptBanner', function spec() {
     const subject = this.makeSubject({ promptKey });
 
     subject.addCount();
-    expect(localStorage.setItem).toHaveBeenLastCalledWith('test', 1);
+    expect(subject.count).toEqual(1);
   });
 
-  it('should get correct value from localStorage', () => {
+  it('should get correct value', () => {
+    const subject = this.makeSubject();
+
+    expect(subject.count).toEqual(0);
+  });
+
+  it('should get count from locastorage', () => {
     const subject = this.makeSubject();
 
     subject.addCount().addCount();
+    expect(subject.count).toEqual(2);
+    subject._setCountToStorage();
     expect(localStorage.__STORE__[defaultPromptKey]).toBe('2');
+  });
+
+  it('should set count to locastorage', () => {
+    const subject = this.makeSubject();
+
+    subject.addCount().addCount();
+    expect(subject._setCountToStorage()).toEqual(2);
+  });
+
+  it('should get correct value after addCount', () => {
+    const subject = this.makeSubject();
+
+    subject.addCount().addCount();
+    expect(subject.count).toEqual(2);
   });
 
   it('should checkPromtp if the mininum count is not enough', () => {
@@ -59,5 +81,12 @@ describe('installPromptBanner', function spec() {
     subject.pop = jest.fn();
     subject.addCount().addCount().addCount().checkPrompt();
     expect(subject.pop).toHaveBeenCalled();
+  });
+
+  it('should be restore count if localstorage has value', () => {
+    localStorage.setItem(defaultPromptKey, 2);
+    const installPromptBanner = new InstallPromptBanner();
+
+    expect(installPromptBanner.count).toEqual(2);
   });
 });
