@@ -23,6 +23,7 @@ install:
 script:
   - yarn
   - yarn run test:ci
+  - yarn build
   - codecov
 
 branches:
