@@ -72,6 +72,7 @@ class installPromptBanner {
   pop = () => {
     if (this.deferredPrompt) {
       this.deferredPrompt.prompt();
+      this.deferredPrompt = null;
     }
 
     return this;
